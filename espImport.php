@@ -1,10 +1,16 @@
 <?php
 require_once 'database.php';
-require_once 'sensorList.php';
+
+$sensors = [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+];
 
 if (isset($_GET["DataPack"])) { //若收到資料包就執行, isset:用於檢測()內是否為null
    $DataPack = $_GET["DataPack"]; //讀資料包
-   $Datas = mb_split(",", $DataPack); //以逗號作為分割符, $Datas為陣列
+   $Datas = mb_split(",", $DataPack); //以逗號作為分割符, 此時$Datas為陣列
 }
 else {
    echo "Datas Import Error : (";
@@ -28,4 +34,3 @@ else {
 
 $connection->close();
 ?>
-
