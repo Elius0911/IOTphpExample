@@ -1,10 +1,9 @@
-https://github.com/Elius0911/IOTphpExample/blob/master/database.php
-
 <?php
 //資料庫連接
 $host = 'localhost';
 $dbUser ='root';
 $dbPassword = 'root';
-$dbName = 'fire';
+$dbName = 'test'; //資料庫名稱
 $connection = mysqli_connect($host, $dbUser, $dbPassword, $dbName);
 ?>
+
