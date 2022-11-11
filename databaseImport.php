@@ -11,6 +11,18 @@ while ($row = $result->fetch_assoc()) { // fetch_assoc: 取得資料之值
     $s4 = array_values($row)[3];
 }
 
+function alarmJudge () {
+    global $s1;
+    if ($s1 != 0) {
+        $newData = array('alarm' => 1, 'Text' => "cc");
+    }
+    else {
+        $newData = array('alarm' => 0);
+    }
+    file_put_contents('alarm.json', json_encode($newData)); //複寫alarm.json
+}
+
+alarmJudge();
 
 echo ("<script type=\"text/javascript\">");
 echo ("function fresh_page()");
