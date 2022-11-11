@@ -1,5 +1,5 @@
 <?php
-require_once 'database.php';
+require_once 'database.php'; //連結資料庫, 必需
 
 $sensors = [
     "s1",

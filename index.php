@@ -1,5 +1,5 @@
 <?php
-require_once 'databaseImport.php';
+require_once 'databaseImport.php'; //各感測器的值匯入
 ?>
 
 <!doctype html>
@@ -7,9 +7,10 @@ require_once 'databaseImport.php';
 
 <body>
     <?php
-    if ($cc == 0)
-        echo '<img src = "picture/redCircle.png" width="50" height="50" >';   //不亮
+    if ($s1 == 0)
+        echo '<img src = "picture/redCircle.png" width="50" height="50" />';   //不亮
     else
         echo '<img src = "picture/red.png" width="50" height="50" />';        //亮
     ?>
 </body>
+
