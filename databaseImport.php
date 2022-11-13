@@ -1,5 +1,6 @@
 <?php
 require_once 'database.php'; //連結資料庫, 必需
+require_once 'sensors.php'; //感測器們
 
 $sql = "SELECT * FROM `lb` WHERE 1";
 $result = $connection->query($sql);
@@ -29,7 +30,7 @@ echo ("function fresh_page()");
 echo ("{");
 echo ("window.location.reload();");
 echo ("}");
-echo ("setTimeout('fresh_page()',1000);"); //1秒刷新一次
+echo ("setTimeout('fresh_page()',1000);");  //TODO: X毫秒刷新一次(1000ms = 1s)
 echo ("</script>");
 ?>
 
